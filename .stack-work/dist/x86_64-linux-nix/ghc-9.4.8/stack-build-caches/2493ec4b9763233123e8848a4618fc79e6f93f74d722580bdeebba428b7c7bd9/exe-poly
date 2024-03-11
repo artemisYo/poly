@@ -1,0 +1,16 @@
+/home/artemis/Projects/poly/.stack-work/dist/x86_64-linux-nix/ghc-9.4.8/build/poly/autogen/Paths_poly.hs:
+  hash: 41836b14fed12ce3955c999d7c9bddfdc2031c86776c57ec7ba08cce4d6cd94b
+/home/artemis/Projects/poly/.stack-work/dist/x86_64-linux-nix/ghc-9.4.8/build/poly/autogen/cabal_macros.h:
+  hash: ec3d9e9e4544ef0d36312e3620d30462078c675688fbf6eef4721766ade8fdb7
+/home/artemis/Projects/poly/README.md:
+  hash: 3d08a75149c6473ba78ece244cc9b37854822a168b7108d290178f4d6b081112
+/home/artemis/Projects/poly/package.yaml:
+  hash: 0a28dfc9bc2433071f4705641371433fc78854d04cf7db8768924daa903de4b8
+/home/artemis/Projects/poly/poly.cabal:
+  hash: 5e240e7a142cb193bbed988de9723839eb786f6134c98f0aa49c50cda6ea7b64
+/home/artemis/Projects/poly/src/Main.hs:
+  hash: 36b4234172b25938ecf88a82f014fed25f81f0e4d80953379e7760a4c4060c13
+/nix/store/kvb3ad8214dfvxz169val6r16nw3j0g5-ghc-9.4.8/lib/ghc-9.4.8/rts/include/ghcversion.h:
+  hash: 4bc88722407a89d1efbfa9c116cd4017af6ea3ff746643032b96cef62782f5dd
+/nix/store/zzwrkd2n3blr2m5ydm6236kbisvldj73-glibc-2.38-44-dev/include/stdc-predef.h:
+  hash: d6bcc58441a423bbb3a52171fcd3b84d8b36e332a55221a1c3e6e899bc43ccb3
