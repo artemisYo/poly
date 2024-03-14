@@ -68,3 +68,4 @@ extra-deps:
 
 nix:
     enable: true
+    packages: [mesa, libGL, zlib, pkg-config, glew, freetype, freeglut, SDL2]
