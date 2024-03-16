@@ -41,6 +41,7 @@ packages:
 #
 extra-deps:
 - monomer-1.6.0.1
+- containers-0.7
 
 # Override default flag values for local packages and extra-deps
 # flags: {}
