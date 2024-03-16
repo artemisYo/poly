@@ -17,7 +17,9 @@ type Env = WidgetEnv State Event
 type Node = WidgetNode State Event
 
 textNode :: Text -> Node
-textNode t = label t `styleBasic` [ textFont "default", textSize 50, textColor black ]
+textNode t =
+    label_ t [ multiline ]
+    `styleBasic` [ textFont "default", textSize 50, textColor black ]
 
 view :: Text -> Env -> State -> Node
 view t env state = (keystroke [("q", Exit)] $ textNode t) `nodeFocusable` True
