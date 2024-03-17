@@ -12,12 +12,58 @@ packages:
   original:
     hackage: monomer-1.6.0.1
 - completed:
-    hackage: containers-0.7@sha256:e9b5fdcc609159410d408c47e0be13663bb0b4a42a5183b52aa0ac9c99e1dfec,2668
+    hackage: containers-0.6.8@sha256:bb2bec1bbc6b39a7c97cd95e056a5698ec45beb5d8feb6caae12af64e4bd823c,2670
     pantry-tree:
-      sha256: 265b0a6110df990b5f9f04d21856333ed5ed66f37a4b0a0215901d831f69629b
+      sha256: 62d0b7f21a9f298867bbf0acae201d1fe4e32d309b4085a52c037eb551852811
       size: 2954
   original:
-    hackage: containers-0.7
+    hackage: containers-0.6.8
+- completed:
+    hackage: binary-0.8.9.1@sha256:81f468c1c75fd6535152ab69b2d32ac6cfcc03e345267b069abe4da56ec95801,6523
+    pantry-tree:
+      sha256: 956ecd662408f69615977b87a92e042abcdc447b7824b8aabf5788c4393c10c5
+      size: 1976
+  original:
+    hackage: binary-0.8.9.1
+- completed:
+    hackage: text-2.0.2@sha256:71b5fa8c64d3c1fd0a08f993463220867b08290a2256e94b0952bf0e8f5a45cc,9905
+    pantry-tree:
+      sha256: 25f3b6dd211e30f9e0ef5047bb9f30df7a9296cf1043873e31558196dfe78676
+      size: 7514
+  original:
+    hackage: text-2.0.2
+- completed:
+    hackage: parsec-3.1.17.0@sha256:6cf18e59d9f1c5b40385457b82ab679dc18d3c5bd3c2c67b2f94e1e8732e6624,5119
+    pantry-tree:
+      sha256: cca87377fcfe25583e1f7aadc4971111a86c2e66002dffa304be92f294db32c8
+      size: 2810
+  original:
+    hackage: parsec-3.1.17.0
+- completed:
+    hackage: Cabal-3.10.2.1@sha256:0f7cc73c7c0c18464ce249c97267a5188d796690a926d73b6e084a4612a66e32,12693
+    pantry-tree:
+      sha256: 1b310294470d20ce457d90738b33dcf4fa952cf5d5f7df60cd1e47ea8a5dccba
+      size: 9224
+  original:
+    hackage: Cabal-3.10.2.1
+- completed:
+    hackage: Cabal-syntax-3.10.2.0@sha256:b2235bd61763a826259805a34ba3538888fe06850fc6bc1712e625baedf07c16,7675
+    pantry-tree:
+      sha256: 2130300bf88bad99a883a5f0fdc07f7c8bdb93e5e3ac2f25255b9b8d32b23f9c
+      size: 11052
+  original:
+    hackage: Cabal-syntax-3.10.2.0
+- completed:
+    commit: b46c028afdf9cd6cb59065881f0d14dd89b8fb15
+    git: https://github.com/fuzzypixelz/Hustle.git
+    name: Hustle
+    pantry-tree:
+      sha256: 854d714962e6d5a56e9a0c4b3decd62961e5f06dddd3aebf9fc4751cf2ab3d06
+      size: 38777
+    version: 0.1.0.0
+  original:
+    commit: b46c028afdf9cd6cb59065881f0d14dd89b8fb15
+    git: https://github.com/fuzzypixelz/Hustle.git
 snapshots:
 - completed:
     sha256: a81fb3877c4f9031e1325eb3935122e608d80715dc16b586eb11ddbff8671ecd

@@ -41,7 +41,14 @@ packages:
 #
 extra-deps:
 - monomer-1.6.0.1
-- containers-0.7
+- containers-0.6.8
+- binary-0.8.9.1
+- text-2.0.2
+- parsec-3.1.17.0
+- Cabal-3.10.2.1
+- Cabal-syntax-3.10.2.0
+- git: https://github.com/fuzzypixelz/Hustle.git
+  commit: b46c028afdf9cd6cb59065881f0d14dd89b8fb15
 
 # Override default flag values for local packages and extra-deps
 # flags: {}
