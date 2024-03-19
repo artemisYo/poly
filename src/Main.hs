@@ -4,48 +4,44 @@ module Main (main) where
 
 import Monomer
 import Data.Text
-import Hustle (document)
-import Text.Megaparsec (parse)
 import System.Environment (getArgs)
 import Data.Maybe (listToMaybe, fromMaybe)
 
-data Config = Config
+data State = State
     { keys :: [(Text, Event)]
+    , textSz :: Double
+    } deriving (Eq)
+
+defaultState :: State
+defaultState = State
+    { keys =
+        [ ("q", Exit)
+        , ("s", TextSmaller)
+        , ("b", TextBigger)
+        ]
+    , textSz = 50
     }
 
-defaultConfig :: Config
-defaultConfig = Config
-    { keys = [("q", Exit)]
-    }
-
-data State = State {} deriving (Eq)
 data Event
     = Init
     | Exit
+    | TextSmaller
+    | TextBigger
     deriving (Eq)
 
 type Env = WidgetEnv State Event
 type Node = WidgetNode State Event
 
-rightToMaybe :: Either a b -> Maybe b
-rightToMaybe Right b = Just b
-rightToMaybe Left _ = Nothing
-
-parseConfig :: IO (Maybe Document)
-parseConfig = do
-    config <- readFile "config.kdl"
-    return $ rightToMaybe $ parse document "" config
-
-getConfig :: IO Config
-getConfig = return defaultConfig
-
-textNode :: Text -> Node
-textNode t =
+textNode :: Double -> Text -> Node
+textNode size t =
     label_ t [ multiline ]
-    `styleBasic` [ textFont "default", textSize 50, textColor black ]
+    `styleBasic` [ textFont "default", textSize size, textColor black ]
 
 view :: Text -> Env -> State -> Node
-view t env state = (keystroke [("q", Exit)] $ textNode t) `nodeFocusable` True
+view t env state =
+    ( keystroke [("q", Exit)]
+    $ textNode (textSz state) t
+    ) `nodeFocusable` True
 
 update
     :: Env
@@ -57,6 +53,11 @@ update env node state event =
     case event of
         Init -> []
         Exit -> [ exitApplication ]
+        TextSmaller -> [ Model smallerText ]
+        TextBigger -> [ Model biggerText ]
+  where
+    smallerText = state { textSz = textSz state - 4 }
+    biggerText = state { textSz = textSz state + 4 }
 
 getFileName :: IO String
 getFileName = do
@@ -73,5 +74,4 @@ main = do
           [ appInitEvent Init
           , appFontDef "default" "./assets/GeistMono-Regular.otf"
           ]
-    let nullState = State {}
-    startApp nullState update (view ct) config
+    startApp defaultState update (view ct) config

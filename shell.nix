@@ -15,7 +15,7 @@ let
     };
 in
 pkgs.mkShell {
-    buildInputs = with pkgs; [
+    buildInputs = [
         stack-wrapped
     ];
     NIX_PATH = "nixpkgs=" + pkgs.path;
